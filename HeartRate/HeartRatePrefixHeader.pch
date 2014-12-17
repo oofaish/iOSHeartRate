@@ -1,0 +1,22 @@
+//
+//  TempLoggerPrefixHeader.pch
+//  TempLogger
+//
+//  Created by Yu Suo on 11/5/14.
+//  Copyright (c) 2014 MbientLab Inc. All rights reserved.
+//
+
+#ifndef TempLogger_TempLoggerPrefixHeader_pch
+#define TempLogger_TempLoggerPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "ColorConstants.h"
+#import "FontConstants.h"
+#import "StringConstants.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif
+
