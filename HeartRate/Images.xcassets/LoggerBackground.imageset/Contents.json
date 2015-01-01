@@ -7,11 +7,11 @@
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "logger_background_640x960.png"
+      "filename" : "launch_screen_640_960.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "logger-background.png",
+      "filename" : "background_screen.png",
       "subtype" : "retina4",
       "scale" : "2x"
     },
