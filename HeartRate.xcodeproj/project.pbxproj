@@ -13,9 +13,8 @@
 		406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1419EF73E5007C0217 /* Images.xcassets */; };
 		406CCC3B19F044A7007C0217 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3A19F044A7007C0217 /* MainTableViewController.m */; };
 		406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3D19F05A05007C0217 /* ScanTableViewController.m */; };
-		408CA8C81A400FB500AC578C /* MetaWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 408CA8C71A400FB500AC578C /* MetaWear.framework */; };
+		A14849302F21FD6D4216DEC4 /* libPods-HeartRate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6658E96212037D706049A067 /* libPods-HeartRate.a */; };
 		ABC09FCB1A4111B300229140 /* HRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC09FCA1A4111B300229140 /* HRViewController.m */; };
-		ABC09FCE1A41128200229140 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC09FCD1A41128200229140 /* MBProgressHUD.m */; };
 		ABC09FD11A4117D500229140 /* Heart-Healthy.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC09FD01A4117D500229140 /* Heart-Healthy.png */; };
 		D06E997D1A0B597E002B3672 /* icon-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997B1A0B597E002B3672 /* icon-arrow.png */; };
 		D06E997E1A0B597E002B3672 /* icon-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D06E997C1A0B597E002B3672 /* icon-arrow@2x.png */; };
@@ -23,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B6C1B8FF4F410D4FEF86A8A /* Pods-HeartRate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRate.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeartRate/Pods-HeartRate.release.xcconfig"; sourceTree = "<group>"; };
 		406CCC0419EF73E5007C0217 /* HeartRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		406CCC0819EF73E5007C0217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		406CCC0919EF73E5007C0217 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,11 +34,10 @@
 		406CCC3A19F044A7007C0217 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		406CCC3C19F05A05007C0217 /* ScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTableViewController.h; sourceTree = "<group>"; };
 		406CCC3D19F05A05007C0217 /* ScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
-		408CA8C71A400FB500AC578C /* MetaWear.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MetaWear.framework; sourceTree = "<group>"; };
+		6658E96212037D706049A067 /* libPods-HeartRate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeartRate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B37D229C8156A1EDC92FFBB /* Pods-HeartRate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeartRate/Pods-HeartRate.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC09FC91A4111B300229140 /* HRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRViewController.h; sourceTree = "<group>"; };
 		ABC09FCA1A4111B300229140 /* HRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HRViewController.m; sourceTree = "<group>"; };
-		ABC09FCC1A41128200229140 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		ABC09FCD1A41128200229140 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		ABC09FD01A4117D500229140 /* Heart-Healthy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Heart-Healthy.png"; sourceTree = "<group>"; };
 		D06E994A1A0AEE3C002B3672 /* ColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConstants.h; sourceTree = "<group>"; };
 		D06E994B1A0AF008002B3672 /* HeartRatePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeartRatePrefixHeader.pch; sourceTree = "<group>"; };
@@ -55,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				408CA8C81A400FB500AC578C /* MetaWear.framework in Frameworks */,
+				A14849302F21FD6D4216DEC4 /* libPods-HeartRate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,10 +64,10 @@
 		406CCBFB19EF73E5007C0217 = {
 			isa = PBXGroup;
 			children = (
-				ABC09FCF1A41128B00229140 /* MBProgressHUD */,
 				406CCC0619EF73E5007C0217 /* HeartRate */,
 				406CCC2D19EF73F6007C0217 /* Frameworks */,
 				406CCC0519EF73E5007C0217 /* Products */,
+				682CF089949A5FE18B8CA99C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,18 +118,18 @@
 		406CCC2D19EF73F6007C0217 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				408CA8C71A400FB500AC578C /* MetaWear.framework */,
+				6658E96212037D706049A067 /* libPods-HeartRate.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ABC09FCF1A41128B00229140 /* MBProgressHUD */ = {
+		682CF089949A5FE18B8CA99C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ABC09FCC1A41128200229140 /* MBProgressHUD.h */,
-				ABC09FCD1A41128200229140 /* MBProgressHUD.m */,
+				8B37D229C8156A1EDC92FFBB /* Pods-HeartRate.debug.xcconfig */,
+				1B6C1B8FF4F410D4FEF86A8A /* Pods-HeartRate.release.xcconfig */,
 			);
-			name = MBProgressHUD;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 406CCC2719EF73E5007C0217 /* Build configuration list for PBXNativeTarget "HeartRate" */;
 			buildPhases = (
+				4B13DC778C2DA731FBDBCB93 /* Check Pods Manifest.lock */,
 				406CCC0019EF73E5007C0217 /* Sources */,
 				406CCC0119EF73E5007C0217 /* Frameworks */,
 				406CCC0219EF73E5007C0217 /* Resources */,
+				30428AA71565F504B7FB04D1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,7 +165,6 @@
 				TargetAttributes = {
 					406CCC0319EF73E5007C0217 = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = S2273LZ6GL;
 					};
 				};
 			};
@@ -201,6 +201,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		30428AA71565F504B7FB04D1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartRate/Pods-HeartRate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B13DC778C2DA731FBDBCB93 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		406CCC0019EF73E5007C0217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -212,7 +245,6 @@
 				406CCC0A19EF73E5007C0217 /* main.m in Sources */,
 				ABC09FCB1A4111B300229140 /* HRViewController.m in Sources */,
 				D079C4281A159A79001D6DDE /* StartViewController.m in Sources */,
-				ABC09FCE1A41128200229140 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +344,7 @@
 		};
 		406CCC2819EF73E5007C0217 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B37D229C8156A1EDC92FFBB /* Pods-HeartRate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -325,7 +358,7 @@
 				INFOPLIST_FILE = HeartRate/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = HeartRate;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -335,6 +368,7 @@
 		};
 		406CCC2919EF73E5007C0217 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B6C1B8FF4F410D4FEF86A8A /* Pods-HeartRate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
