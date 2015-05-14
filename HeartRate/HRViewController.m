@@ -112,7 +112,6 @@
         [[NSRunLoop mainRunLoop] addTimer:self.readAnalogPinTimer forMode:NSRunLoopCommonModes];
         
         self.statusLabel.text = @"Syncing...";
-        
     }];
 }
 
@@ -136,9 +135,9 @@
 - (void)updateGPIOAnalogRead {
     self.statusLabel.text = @"Reading...";
     
-    [self.device.gpio.pins[0] readAnalogValueUsingMode:MBLAnalogReadModeSupplyRatio handler:^(NSDecimalNumber *analogNumber, NSError *error) {
-        
-        int Signal = [analogNumber floatValue]*512;
+    MBLGPIOPin *pin0 = self.device.gpio.pins[0];
+    [pin0.analogRatio readWithHandler:^(MBLNumericData *analogNumber, NSError *error) {
+        int Signal = analogNumber.value.floatValue*512;
         NSLog(@"Got this data %d",Signal);
         
         // We take a reading every 0.05 seconds

@@ -1,1 +1,1 @@
-../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLHapticBuzzer.h
+../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLHapticBuzzer.h
