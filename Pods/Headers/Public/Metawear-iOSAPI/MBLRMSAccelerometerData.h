@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLRMSAccelerometerData.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLRMSAccelerometerData.h

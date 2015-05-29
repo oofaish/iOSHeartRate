@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLDeviceInfo.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLDeviceInfo.h

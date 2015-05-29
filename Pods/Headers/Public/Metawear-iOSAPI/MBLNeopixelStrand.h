@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLNeopixelStrand.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLNeopixelStrand.h

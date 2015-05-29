@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLI2C.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLI2C.h

@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLDataSwitch.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLDataSwitch.h

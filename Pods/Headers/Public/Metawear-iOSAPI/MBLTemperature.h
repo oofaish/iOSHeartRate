@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLTemperature.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLTemperature.h

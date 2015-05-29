@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLBarometer.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLBarometer.h

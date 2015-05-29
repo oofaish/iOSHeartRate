@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLConstants.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLConstants.h

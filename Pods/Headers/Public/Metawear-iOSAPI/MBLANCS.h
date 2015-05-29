@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLANCS.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLANCS.h

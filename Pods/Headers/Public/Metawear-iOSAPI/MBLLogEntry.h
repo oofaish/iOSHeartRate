@@ -1,1 +1,1 @@
-../../../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLLogEntry.h
+../../../Metawear-iOSAPI/MetaWear.framework/Versions/A/Headers/MBLLogEntry.h
