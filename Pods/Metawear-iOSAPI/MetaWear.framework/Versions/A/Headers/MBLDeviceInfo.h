@@ -45,7 +45,7 @@
  */
 @property (nonatomic, strong) NSString *manufacturerName;
 /**
-Serial Number string
+ Serial Number string
  */
 @property (nonatomic, strong) NSString *serialNumber;
 /**
@@ -56,5 +56,9 @@ Serial Number string
  Firmware Revision string
  */
 @property (nonatomic, strong) NSString *firmwareRevision;
+/**
+ Model Number string
+ */
+@property (nonatomic, strong) NSString *modelNumber;
 
 @end
