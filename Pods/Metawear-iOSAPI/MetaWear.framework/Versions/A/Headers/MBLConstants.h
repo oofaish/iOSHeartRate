@@ -3,19 +3,19 @@
  * MetaWear
  *
  * Created by Stephen Schiffli on 7/30/14.
- * Copyright 2014 MbientLab Inc. All rights reserved.
+ * Copyright 2014-2015 MbientLab Inc. All rights reserved.
  *
  * IMPORTANT: Your use of this Software is limited to those specific rights
  * granted under the terms of a software license agreement between the user who
  * downloaded the software, his/her employer (which must be your employer) and
  * MbientLab Inc, (the "License").  You may not use this Software unless you
  * agree to abide by the terms of the License which can be found at
- * www.mbientlab.com/terms . The License limits your use, and you acknowledge,
- * that the  Software may not be modified, copied or distributed and can be used
- * solely and exclusively in conjunction with a MbientLab Inc, product.  Other
- * than for the foregoing purpose, you may not use, reproduce, copy, prepare
- * derivative works of, modify, distribute, perform, display or sell this
- * Software and/or its documentation for any purpose.
+ * www.mbientlab.com/terms.  The License limits your use, and you acknowledge,
+ * that the Software may be modified, copied, and distributed when used in
+ * conjunction with an MbientLab Inc, product.  Other than for the foregoing
+ * purpose, you may not use, reproduce, copy, prepare derivative works of,
+ * modify, distribute, perform, display or sell this Software and/or its
+ * documentation for any purpose.
  *
  * YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
  * PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
@@ -30,7 +30,7 @@
  * DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
  *
  * Should you have any questions regarding your right to use this Software,
- * contact MbientLab Inc, at www.mbientlab.com.
+ * contact MbientLab via email: hello@mbientlab.com
  */
 
 #import <CoreBluetooth/CoreBluetooth.h>
@@ -56,7 +56,7 @@ typedef void (^MBLSwitchStateHandler)(BOOL isPressed, NSError *error);
 typedef void (^MBLBoolHandler)(BOOL isTrue, NSError *error);
 typedef void (^MBLFloatHandler)(float number, NSError *error);
 typedef void (^MBLStringHandler)(NSString *string);
-typedef void (^MBLFirmwareBuildHandler)(MBLFirmwareBuild *firmware);
+typedef void (^MBLFirmwareBuildHandler)(MBLFirmwareBuild *firmware, NSError *error);
 typedef void (^MBLUrlHandler)(NSURL *url, NSError *error);
 
 #pragma mark - Errors
@@ -89,3 +89,9 @@ extern NSInteger const kMBLErrorConnectionTimeout;
 
 /*! @abstract 108: Couldn't perform DFU, bad model number given */
 extern NSInteger const kMBLErrorWrongFirmwareModelNumber;
+
+/*! @abstract 109: Couldn't perform DFU, no valid firmware releases found */
+extern NSInteger const kMBLErrorNoAvaliableFirmware;
+
+/*! @abstract 110: MetaWear not connected, can't perform operation */
+extern NSInteger const kMBLErrorNotConnected;

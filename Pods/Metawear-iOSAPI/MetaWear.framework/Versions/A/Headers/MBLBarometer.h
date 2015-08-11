@@ -3,19 +3,19 @@
  * MetaWear
  *
  * Created by Stephen Schiffli on 4/27/15.
- * Copyright 2015 MbientLab Inc. All rights reserved.
+ * Copyright 2014-2015 MbientLab Inc. All rights reserved.
  *
  * IMPORTANT: Your use of this Software is limited to those specific rights
  * granted under the terms of a software license agreement between the user who
  * downloaded the software, his/her employer (which must be your employer) and
  * MbientLab Inc, (the "License").  You may not use this Software unless you
  * agree to abide by the terms of the License which can be found at
- * www.mbientlab.com/terms . The License limits your use, and you acknowledge,
- * that the  Software may not be modified, copied or distributed and can be used
- * solely and exclusively in conjunction with a MbientLab Inc, product.  Other
- * than for the foregoing purpose, you may not use, reproduce, copy, prepare
- * derivative works of, modify, distribute, perform, display or sell this
- * Software and/or its documentation for any purpose.
+ * www.mbientlab.com/terms.  The License limits your use, and you acknowledge,
+ * that the Software may be modified, copied, and distributed when used in
+ * conjunction with an MbientLab Inc, product.  Other than for the foregoing
+ * purpose, you may not use, reproduce, copy, prepare derivative works of,
+ * modify, distribute, perform, display or sell this Software and/or its
+ * documentation for any purpose.
  *
  * YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
  * PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
@@ -30,7 +30,7 @@
  * DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
  *
  * Should you have any questions regarding your right to use this Software,
- * contact MbientLab Inc, at www.mbientlab.com.
+ * contact MbientLab via email: hello@mbientlab.com
  */
 
 #import <MetaWear/MBLConstants.h>
@@ -38,62 +38,11 @@
 #import <MetaWear/MBLModule.h>
 
 /**
- Barometer oversampling rates
- */
-typedef NS_ENUM(uint8_t, MBLBarometerOversample) {
-    MBLBarometerOversampleUltraLowPower = 1,
-    MBLBarometerOversampleLowPower = 2,
-    MBLBarometerOversampleStandard = 3,
-    MBLBarometerOversampleHighResolution = 4,
-    MBLBarometerOversampleUltraHighResolution = 5,
-};
-
-/**
- Barometer output filter
- */
-typedef NS_ENUM(uint8_t, MBLBarometerFilter) {
-    MBLBarometerFilterOff = 0,
-    MBLBarometerFilterAverage2 = 1,
-    MBLBarometerFilterAverage4 = 2,
-    MBLBarometerFilterAverage8 = 3,
-    MBLBarometerFilterAverage16 = 4,
-};
-
-/**
- Barometer standby times
- */
-typedef NS_ENUM(uint8_t, MBLBarometerStandby) {
-    MBLBarometerStandby0_5 = 0,
-    MBLBarometerStandby62_5 = 1,
-    MBLBarometerStandby125 = 2,
-    MBLBarometerStandby250 = 3,
-    MBLBarometerStandby500 = 4,
-    MBLBarometerStandby1000 = 5,
-    MBLBarometerStandby2000 = 6,
-    MBLBarometerStandby4000 = 7
-};
-
-
-/**
- Interface to the barometer sensor
+ Interface to an abstract barometer sensor. If you need more advanced
+ features then upcast to the specific sensor on your board, MBLBarometerBMP280.
+ @see MBLAmbientLightLTR329
  */
 @interface MBLBarometer : MBLModule <NSCoding>
-
-/**
- Use this to set pressure sampling mode, higher values produce more accurate
- results but will use more power.
- */
-@property (nonatomic) MBLBarometerOversample pressureOversampling;
-/**
- Use this to set hardware average filtering of pressure samples.
- */
-@property (nonatomic) MBLBarometerFilter hardwareAverageFilter;
-/**
- Set the standby time for the periodicAltitidue and periodicPressure events.
- That is how long the device sleeps between successive measurements
- */
-@property (nonatomic) MBLBarometerStandby standbyTime;
-
 
 /**
  Data representing the atmospheric pressure measured by barometer.
@@ -107,21 +56,5 @@ typedef NS_ENUM(uint8_t, MBLBarometerStandby) {
  value will be altitude in meters.
  */
 @property (nonatomic, strong, readonly) MBLData *altitude;
-
-
-/**
- Data representing the atmospheric pressure measured by barometer. Period
- of event will depend on pressureOversampling and standbyTime.
- Event callbacks will be provided an MBLNumericData object whose float
- value will be pressure in pascals.
- */
-@property (nonatomic, strong, readonly) MBLEvent *periodicPressure;
-/**
- Event representing the altidue calulated from atmospheric pressure. Period
- of event will depend on pressureOversampling and standbyTime.
- Event callbacks will be provided an MBLNumericData object whose float
- value will be altitude in meters.
- */
-@property (nonatomic, strong, readonly) MBLEvent *periodicAltitude;
 
 @end

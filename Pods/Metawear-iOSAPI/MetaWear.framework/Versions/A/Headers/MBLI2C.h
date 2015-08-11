@@ -3,19 +3,19 @@
  * MetaWear
  *
  * Created by Stephen Schiffli on 1/20/15.
- * Copyright 2014 MbientLab Inc. All rights reserved.
+ * Copyright 2014-2015 MbientLab Inc. All rights reserved.
  *
  * IMPORTANT: Your use of this Software is limited to those specific rights
  * granted under the terms of a software license agreement between the user who
  * downloaded the software, his/her employer (which must be your employer) and
  * MbientLab Inc, (the "License").  You may not use this Software unless you
  * agree to abide by the terms of the License which can be found at
- * www.mbientlab.com/terms . The License limits your use, and you acknowledge,
- * that the  Software may not be modified, copied or distributed and can be used
- * solely and exclusively in conjunction with a MbientLab Inc, product.  Other
- * than for the foregoing purpose, you may not use, reproduce, copy, prepare
- * derivative works of, modify, distribute, perform, display or sell this
- * Software and/or its documentation for any purpose.
+ * www.mbientlab.com/terms.  The License limits your use, and you acknowledge,
+ * that the Software may be modified, copied, and distributed when used in
+ * conjunction with an MbientLab Inc, product.  Other than for the foregoing
+ * purpose, you may not use, reproduce, copy, prepare derivative works of,
+ * modify, distribute, perform, display or sell this Software and/or its
+ * documentation for any purpose.
  *
  * YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
  * PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
@@ -30,7 +30,7 @@
  * DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
  *
  * Should you have any questions regarding your right to use this Software,
- * contact MbientLab Inc, at www.mbientlab.com.
+ * contact MbientLab via email: hello@mbientlab.com
  */
 
 #import <MetaWear/MBLModule.h>
@@ -41,8 +41,25 @@
  */
 @interface MBLI2C : MBLModule <NSCoding>
 
+/**
+ Create an I2C data endpoint.  The deivce and register address
+ will be available in the data sheet of whatever device you connect.
+ Event callbacks will be provided an MBLDataSample object whose data
+ property can be used to access the data as bytes.
+ */
 - (MBLI2CData *)dataAtDeviceAddress:(uint8_t)deviceAddress
                     registerAddress:(uint8_t)registerAddress
                              length:(uint8_t)length;
+
+/**
+ Create an I2C data endpoint.  The deivce and register address
+ will be available in the data sheet of whatever device you connect.
+ Event callbacks will be provided an MBLNumericData object whose value
+ will contain the register value formatted as a number.
+ */
+- (MBLI2CData *)numberAtDeviceAddress:(uint8_t)deviceAddress
+                      registerAddress:(uint8_t)registerAddress
+                               length:(uint8_t)length
+                             isSigned:(BOOL)isSigned;
 
 @end
