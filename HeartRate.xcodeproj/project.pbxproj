@@ -144,6 +144,7 @@
 				406CCC0119EF73E5007C0217 /* Frameworks */,
 				406CCC0219EF73E5007C0217 /* Resources */,
 				30428AA71565F504B7FB04D1 /* Copy Pods Resources */,
+				1D22FE0DB2854524BDAABAD7 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,7 +161,7 @@
 		406CCBFC19EF73E5007C0217 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "MbientLab Inc.";
 				TargetAttributes = {
 					406CCC0319EF73E5007C0217 = {
@@ -202,6 +203,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D22FE0DB2854524BDAABAD7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartRate/Pods-HeartRate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		30428AA71565F504B7FB04D1 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +299,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -359,6 +376,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbientlab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HeartRate;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -383,6 +401,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mbientlab.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = HeartRate;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

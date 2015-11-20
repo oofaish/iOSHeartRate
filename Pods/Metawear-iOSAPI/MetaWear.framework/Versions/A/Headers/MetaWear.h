@@ -71,6 +71,7 @@
 #import <MetaWear/MBLOrientationData.h>
 #import <MetaWear/MBLRegister.h>
 #import <MetaWear/MBLRMSAccelerometerData.h>
+#import <MetaWear/MBLSettings.h>
 #import <MetaWear/MBLTemperature.h>
 #import <MetaWear/MBLExternalThermistor.h>
 #import <MetaWear/MBLTimer.h>
