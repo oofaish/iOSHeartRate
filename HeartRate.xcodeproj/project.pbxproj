@@ -149,6 +149,7 @@
 				406CCC0219EF73E5007C0217 /* Resources */,
 				30428AA71565F504B7FB04D1 /* Copy Pods Resources */,
 				1D22FE0DB2854524BDAABAD7 /* Embed Pods Frameworks */,
+				40A587AC1C1A8D0800F4B6D0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -236,6 +237,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeartRate/Pods-HeartRate-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		40A587AC1C1A8D0800F4B6D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 93feded1f4306514df3401694db5e11201b8a59f 10b0d9cf6273fa63def7a332cbaa36975f8990184728f80749448b2d9e18c0dd";
 		};
 		4B13DC778C2DA731FBDBCB93 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

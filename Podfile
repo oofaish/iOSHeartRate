@@ -6,5 +6,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 target 'HeartRate' do
 pod 'Metawear-iOSAPI'
 pod 'MBProgressHUD'
+pod 'Fabric'
+pod 'Crashlytics'
 end
 

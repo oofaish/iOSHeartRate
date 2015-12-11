@@ -36,6 +36,8 @@
 
 #import "AppDelegate.h"
 #import <MetaWear/MetaWear.h>
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -46,6 +48,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [Fabric with:@[[Crashlytics class]]];
     // We need at least 1.0.0 for doing the analog reads
     [MBLMetaWearManager sharedManager].minimumRequiredVersion = MBLFirmwareVersion1_0_0;
     return YES;
