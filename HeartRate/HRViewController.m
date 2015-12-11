@@ -35,6 +35,9 @@
 
 #import "HRViewController.h"
 
+static const int PULSE_SENSOR_DATA_PIN = 0;
+static const int PULSE_SENSOR_ENABLE_PIN = 1;
+
 @interface HRViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *heartImage;
@@ -65,9 +68,11 @@
 
 @synthesize readAnalogPinTimer, IBI, rate, sampleCounter, lastBeatTime, thresh, P, T, amp, BPM, firstBeat, secondBeat, Pulse;
 
-- (void)viewDidLoad
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
+    [super viewWillAppear:animated];
+    
     [self refreshPressed:self];
     self.heartRateLabel.text = @"0";
     self.heartRateLabel.font = FontInformationValue;
@@ -88,19 +93,19 @@
     self.firstBeat = TRUE;
     self.secondBeat = FALSE;
     self.Pulse = FALSE;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
     
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
     [self.readAnalogPinTimer invalidate];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    [self.readAnalogPinTimer invalidate];
+    
+    // Set the enable pin to low to active the pulse sensor
+    MBLGPIOPin *enablePin = self.device.gpio.pins[PULSE_SENSOR_ENABLE_PIN];
+    [enablePin setToDigitalValue:YES];
+    
+    [self.device disconnectWithHandler:nil];
 }
 
 - (IBAction)refreshPressed:(id)sender
@@ -134,6 +139,10 @@
             return;
         }
         
+        // Set the enable pin to low to active the pulse sensor
+        MBLGPIOPin *enablePin = self.device.gpio.pins[PULSE_SENSOR_ENABLE_PIN];
+        [enablePin setToDigitalValue:NO];
+        
         NSLog(@"Set up timer for GPIO pin reading");
         self.readAnalogPinTimer = [NSTimer timerWithTimeInterval:0.05f target:self selector:@selector(updateGPIOAnalogRead) userInfo:nil repeats:YES];
         [[NSRunLoop mainRunLoop] addTimer:self.readAnalogPinTimer forMode:NSRunLoopCommonModes];
@@ -162,8 +171,8 @@
 - (void)updateGPIOAnalogRead {
     self.statusLabel.text = @"Reading...";
     
-    MBLGPIOPin *pin0 = self.device.gpio.pins[0];
-    [pin0.analogRatio readWithHandler:^(MBLNumericData *analogNumber, NSError *error) {
+    MBLGPIOPin *dataPin = self.device.gpio.pins[PULSE_SENSOR_DATA_PIN];
+    [dataPin.analogRatio readWithHandler:^(MBLNumericData *analogNumber, NSError *error) {
         int Signal = analogNumber.value.floatValue*512;
         NSLog(@"Got this data %d",Signal);
         

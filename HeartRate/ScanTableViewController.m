@@ -86,26 +86,64 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    
+    MBLMetaWear *device = self.devices[indexPath.row];
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self didSelectDevice:device hud:hud];
+}
+
+- (void)didSelectDevice:(MBLMetaWear *)device hud:(MBProgressHUD *)hud
+{
+    self.selected = device;
     hud.labelText = @"Connecting...";
-    
-    self.selected = self.devices[indexPath.row];
-    [self.selected connectWithHandler:^(NSError *error) {
+    hud.mode = MBProgressHUDModeIndeterminate;
+    [device connectWithHandler:^(NSError *error) {
         if (!error) {
-            [self.selected.led flashLEDColor:[UIColor greenColor] withIntensity:0.75];
-            [hud hide:YES];
+            [device.led flashLEDColor:[UIColor greenColor] withIntensity:0.75];
+            [hud hide:NO];
             [[[UIAlertView alloc] initWithTitle:@"Pair Device"
                                         message:@"Do you see a blinking green LED on the MetaWear?"
                                        delegate:self
                               cancelButtonTitle:@"No"
                               otherButtonTitles:@"Yes!", nil] show];
+        } else if ([error.domain isEqualToString:kMBLErrorDomain] && error.code == kMBLErrorOutdatedFirmware) {
+            [self updateDevice:device hud:hud];
         } else {
-            hud.labelText = error.localizedDescription;
-            [hud hide:YES afterDelay:2];
+            [hud hide:NO];
+            [[[UIAlertView alloc] initWithTitle:@"Error"
+                                        message:error.localizedDescription
+                                       delegate:nil
+                              cancelButtonTitle:@"Okay"
+                              otherButtonTitles:nil] show];
         }
     }];
 }
+
+- (void)updateDevice:(MBLMetaWear *)device hud:(MBProgressHUD *)hud
+{
+    hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
+    hud.labelText = @"Updating...";
+    [device updateFirmwareWithHandler:^(NSError *error) {
+        hud.mode = MBProgressHUDModeText;
+        if (error) {
+            [hud hide:NO];
+            NSLog(@"Firmware update error: %@", error.localizedDescription);
+            [[[UIAlertView alloc] initWithTitle:@"Update Error"
+                                        message:[@"Please re-connect and try again, if you can't connect, try MetaBoot Mode to recover.\nError: " stringByAppendingString:error.localizedDescription]
+                                       delegate:nil
+                              cancelButtonTitle:@"Okay"
+                              otherButtonTitles:nil] show];
+        } else {
+            [self didSelectDevice:device hud:hud];
+        }
+    } progressHandler:^(float number, NSError *error) {
+        hud.progress = number;
+        if (number == 1.0) {
+            hud.mode = MBProgressHUDModeIndeterminate;
+            hud.labelText = @"Resetting...";
+        }
+    }];
+}
+
 
 #pragma mark - Alert View delegate
 

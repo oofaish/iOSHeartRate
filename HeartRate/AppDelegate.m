@@ -35,6 +35,7 @@
 
 
 #import "AppDelegate.h"
+#import <MetaWear/MetaWear.h>
 
 @interface AppDelegate ()
 
@@ -45,6 +46,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // We need at least 1.0.0 for doing the analog reads
+    [MBLMetaWearManager sharedManager].minimumRequiredVersion = MBLFirmwareVersion1_0_0;
     return YES;
 }
 

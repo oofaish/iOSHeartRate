@@ -13,6 +13,7 @@
 		406CCC1519EF73E5007C0217 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406CCC1419EF73E5007C0217 /* Images.xcassets */; };
 		406CCC3B19F044A7007C0217 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3A19F044A7007C0217 /* MainTableViewController.m */; };
 		406CCC3E19F05A05007C0217 /* ScanTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406CCC3D19F05A05007C0217 /* ScanTableViewController.m */; };
+		40A587A81C1A60FB00F4B6D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A587A71C1A60FB00F4B6D0 /* CoreData.framework */; };
 		A14849302F21FD6D4216DEC4 /* libPods-HeartRate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6658E96212037D706049A067 /* libPods-HeartRate.a */; };
 		ABC09FCB1A4111B300229140 /* HRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC09FCA1A4111B300229140 /* HRViewController.m */; };
 		ABC09FD11A4117D500229140 /* Heart-Healthy.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC09FD01A4117D500229140 /* Heart-Healthy.png */; };
@@ -34,6 +35,7 @@
 		406CCC3A19F044A7007C0217 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		406CCC3C19F05A05007C0217 /* ScanTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanTableViewController.h; sourceTree = "<group>"; };
 		406CCC3D19F05A05007C0217 /* ScanTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanTableViewController.m; sourceTree = "<group>"; };
+		40A587A71C1A60FB00F4B6D0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6658E96212037D706049A067 /* libPods-HeartRate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HeartRate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B37D229C8156A1EDC92FFBB /* Pods-HeartRate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartRate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeartRate/Pods-HeartRate.debug.xcconfig"; sourceTree = "<group>"; };
 		ABC09FC91A4111B300229140 /* HRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HRViewController.h; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40A587A81C1A60FB00F4B6D0 /* CoreData.framework in Frameworks */,
 				A14849302F21FD6D4216DEC4 /* libPods-HeartRate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,6 +121,7 @@
 		406CCC2D19EF73F6007C0217 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				40A587A71C1A60FB00F4B6D0 /* CoreData.framework */,
 				6658E96212037D706049A067 /* libPods-HeartRate.a */,
 			);
 			name = Frameworks;
